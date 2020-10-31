@@ -1,31 +1,34 @@
 
-// c:\_projects look for new ip in azure
-ssh -i C:\Users\vreez\scrap3_key.pem azureuser@13.92.155.233
+# INSTALL
+# c:\_projects look for new ip in azure
+**ssh -i C:\Users\vreez\scrap3_key.pem azureuser@13.92.155.233**
 
-sudo apt update
-// change directory etc...
-git clone https://github.com/vreezy/ingress_scraper.git
-sudo apt install python-pip
-// pip --version
-pip install -r requirements.txt
-nano default.ini
-// paste your config and save
-python scrape_portal.py -s
+**sudo apt update**
 
+## change directory etc...
+**git clone https://github.com/vreezy/ingress_scraper.git**
 
-// webservice
-pip install Flask
-export FLASK_APP=webserver.py
-flask run --host=0.0.0.0
+**sudo apt install python-pip**
 
+**pip install -r requirements.txt**
 
+**nano default.ini**
 
-// visit:
-// TEST
-http://13.92.155.233:5000/response.json
+## paste your config and save
+**python scrape_portal.py -s**
 
-// scrapped
-http://13.92.155.233:5000/response1.json
+## webservice
+**pip install Flask**
+
+**export FLASK_APP=webserver.py**
+
+**flask run --host=0.0.0.0**
+
+# TEST
+**http://13.92.155.233:5000/response.json**
+
+# FINAL
+**http://13.92.155.233:5000/response1.json**
 
 
 ---
