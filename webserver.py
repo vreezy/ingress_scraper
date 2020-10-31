@@ -13,11 +13,15 @@ def test1():
 
 @app.route('/zone1/')
 def zone1():
-    return app.send_static_file('response1.json')
+    response = app.send_static_file('response1.json')
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 @app.route('/zone2/')
 def zone2():
-    return app.send_static_file('response2.json')
+    response =  app.send_static_file('response2.json')
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 @app.route('/<path:path>')
 def static_file(path):
