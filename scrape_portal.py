@@ -180,6 +180,11 @@ if __name__ == "__main__":
     updated_gyms = 0
     updated_pokestops = 0
     
+    f = open("demofile3.txt", "w")
+    f.write("Woops! I have deleted the content!")
+    f.close()
+
+
     IngressLogin = IntelMap(config['cookies'])
 
     if IngressLogin.getCookieStatus() is False:
@@ -191,9 +196,6 @@ if __name__ == "__main__":
 
     if args.cellscore:
 
-        f = open("demofile3.txt", "w")
-        f.write("Woops! I have deleted the content!")
-        f.close()
 
         cellscore = IngressLogin.get_region_score_details(110,112)
         print(cellscore)
