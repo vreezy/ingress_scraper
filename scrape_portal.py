@@ -15,17 +15,6 @@ except ImportError:
 
 DEFAULT_CONFIG = "default.ini"
 
-# SQL Queries #
-###############
-
-GYM_SELECT_QUERY = """SELECT {db_gym_id} FROM {db_name}.{db_gym} WHERE {db_gym_name} is NULL AND {db_gym_id} like '%.%'"""
-GYM_UPDATE_QUERY = """UPDATE {db_name}.{db_gym} set {db_gym_name}= %s, {db_gym_image} = %s WHERE {db_gym_id} = %s"""
-
-POKESTOP_SELECT_QUERY = """SELECT {db_pokestop_id} FROM {db_name}.{db_pokestop} WHERE {db_pokestop_name} is NULL AND {db_pokestop_id} like '%.%'"""
-POKESTOP_UPDATE_QUERY = """UPDATE {db_name}.{db_pokestop} set {db_pokestop_name}= %s, {db_pokestop_image} = %s WHERE {db_pokestop_id} = %s"""
-
-PORTAL_UPDATE_QUERY = """INSERT INTO {db_ingress}.ingress_portals(external_id, name, url, lat, lon, updated, imported) VALUES(%s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE updated=%s, name=%s, url=%s, lat=%s, lon=%s"""
-
 def create_config(config_path):
     """ Parse config. """
     config = dict()
@@ -193,6 +182,8 @@ if __name__ == "__main__":
 
         cellscore = IngressLogin.get_region_score_details(110,112)
         f = open("response1.json", "w")
+        print(type(cellscore))
+        print(cellscore)
         f.write(cellscore)
         f.close()
         print(cellscore)
