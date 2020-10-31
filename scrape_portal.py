@@ -7,6 +7,8 @@ import sys
 import datetime
 from discord_webhook import DiscordWebhook
 
+
+
 # Python2 and Python3 compatibility
 try:
     from ConfigParser import ConfigParser
@@ -181,11 +183,13 @@ if __name__ == "__main__":
     if args.cellscore:
 
         cellscore = IngressLogin.get_region_score_details(110,112)
-        f = open("response1.json", "w")
+        # f = open("response1.json", "w")
         print(type(cellscore))
         print(cellscore)
-        f.write(cellscore)
-        f.close()
+
+        with open('response1.json', 'w') as fp:
+           json.dump(cellscore, fp)
+
         print(cellscore)
 
  
