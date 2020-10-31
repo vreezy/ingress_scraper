@@ -23,10 +23,10 @@
 **python webserver.py**
 
 # TEST
-**http://13.92.155.233:5000/response.json**
+**http://13.92.155.233:5000/test/**
 
 # FINAL
-**http://13.92.155.233:5000/response1.json**
+**http://13.92.155.233:5000/zone1/**
 
 
 ---
