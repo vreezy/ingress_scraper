@@ -20,9 +20,7 @@
 ## webservice
 **pip install Flask**
 
-**export FLASK_APP=webserver.py**
-
-**flask run --host=0.0.0.0**
+**python webserver.py**
 
 # TEST
 **http://13.92.155.233:5000/response.json**
