@@ -182,10 +182,10 @@ if __name__ == "__main__":
 
     if args.cellscore:
 
-        # NR02-GOLF-15
-        cellscore = IngressLogin.get_region_score_details(7017812,50627385)
-        # NR02-GOLF-14
-        cellscore2 = IngressLogin.get_region_score_details(8696043,50267618)
+        # NR02-GOLF-15 50380447 6940699
+        cellscore = IngressLogin.get_region_score_details(50380447,6940699)
+        # NR02-GOLF-14 50267618 8696043
+        cellscore2 = IngressLogin.get_region_score_details(50267618,8696043)
         # f = open("response1.json", "w")
         print(cellscore)
         print(cellscore2)
