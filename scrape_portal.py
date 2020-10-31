@@ -179,11 +179,6 @@ if __name__ == "__main__":
     print("Connection clear")
     updated_gyms = 0
     updated_pokestops = 0
-    
-    f = open("demofile3.txt", "w")
-    f.write("Woops! I have deleted the content!")
-    f.close()
-
 
     IngressLogin = IntelMap(config['cookies'])
 
@@ -196,8 +191,10 @@ if __name__ == "__main__":
 
     if args.cellscore:
 
-
         cellscore = IngressLogin.get_region_score_details(110,112)
+        f = open("response1.json", "w")
+        f.write(cellscore)
+        f.close()
         print(cellscore)
 
  
