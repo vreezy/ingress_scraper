@@ -170,7 +170,11 @@ class IntelMap:
             'latE6': lat,   # 30420109, 104938641
             'lngE6': lng,
         })
+        print("send Data:")
+        print(data)
         data = json.dumps(data)
         _ = self.r.post('https://intel.ingress.com/r/getRegionScoreDetails', headers=self.headers, data=data, proxies=self.proxy)
         return json.loads(_.text)
+
+
 
