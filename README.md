@@ -21,8 +21,11 @@ flask run --host=0.0.0.0
 
 
 // visit:
+// TEST
 http://13.92.155.233:5000/response.json
 
+// scrapped
+http://13.92.155.233:5000/response1.json
 
 
 ---
