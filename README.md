@@ -1,7 +1,7 @@
+# Azure notes
+**ssh -i C:\Users\vreez\scrap3_key.pem azureuser@13.92.155.233**
 
 # INSTALL
-# c:\_projects look for new ip in azure
-**ssh -i C:\Users\vreez\scrap3_key.pem azureuser@13.92.155.233**
 
 **sudo apt update**
 
@@ -12,9 +12,9 @@
 
 **pip install -r requirements.txt**
 
+## copy and paste example ini and add cookie settings (bottom of readme -< getCOOKIE>)
 **nano default.ini**
 
-## paste your config and save
 **python scrape_portal.py -s**
 
 ## webservice
@@ -30,8 +30,7 @@
 
 
 ---
-# ingress_scraper
-
+# getCOOKIE
 original API by https://github.com/lc4t/ingress-api
 since it was last modified in 2017, since URL of intel map has changed so installing ingressAPI via pip will install version that have old url. 
 
