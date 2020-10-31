@@ -158,6 +158,8 @@ if __name__ == "__main__":
         "-i", "--ingress", action='store_true', help="updates ingress portal table")
     parser.add_argument(
         "-c", "--config", default="default.ini", help="Config file to use")
+    parser.add_argument(
+        "-s", "--cellscore", action='store_true', help="get cellscores")
     args = parser.parse_args()
     config_path = args.config
     config = create_config(config_path)
@@ -186,7 +188,9 @@ if __name__ == "__main__":
             response = webhook.execute()
         sys.exit()
 
-
+    if args.cellscore:
+        cellscore = IngressLogin.get_region_score_details(110,112)
+        print(cellscore)
 
     if args.all_poi or args.ingress:
         bbox = list(config['bbox'].split(';'))
