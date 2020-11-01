@@ -23,6 +23,12 @@ def zone2():
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response
 
+@app.route('/zone3/')
+def zone3():
+    response =  app.send_static_file('response3.json')
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
+
 @app.route('/<path:path>')
 def static_file(path):
     return app.send_static_file(path)
