@@ -186,8 +186,8 @@ if __name__ == "__main__":
         cellscore = IngressLogin.get_region_score_details(50380447,6940699)
         # NR02-GOLF-14 50267618 8696043
         cellscore2 = IngressLogin.get_region_score_details(50267618,8696043)
-        # NR02-GOLF-12 4061932 2577708
-        cellscore3 = IngressLogin.get_region_score_details(4061932,2577708)
+        # NR02-GOLF-12 2577708 4061932 
+        cellscore3 = IngressLogin.get_region_score_details(2577708,4061932)
 
         # f = open("response1.json", "w")
         # print(cellscore)
