@@ -188,6 +188,8 @@ if __name__ == "__main__":
         cellscore2 = IngressLogin.get_region_score_details(50267618,8696043)
         # NR02-GOLF-12 51628183 7424011
         cellscore3 = IngressLogin.get_region_score_details(51628183,7424011)
+      # NR02-HOTEL-00 50578190 5323117
+        cellscore4 = IngressLogin.get_region_score_details(50578190,5323117)
 
         # f = open("response1.json", "w")
         # print(cellscore)
@@ -201,5 +203,8 @@ if __name__ == "__main__":
 
         with open('response3.json', 'w') as fp:
            json.dump(cellscore3, fp)
+
+        with open('response4.json', 'w') as fp:
+           json.dump(cellscore4, fp)
 
  
